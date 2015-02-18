@@ -82,6 +82,46 @@ function stanford_event_series_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-stanford_event_series-field_s_event_series_event'
+  $field_instances['node-stanford_event_series-field_s_event_series_event'] = array(
+    'bundle' => 'stanford_event_series',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Begin typing the name of an event to add to the event series.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_event_series_event',
+    'label' => 'Event',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_event_series-field_s_image_info'
   $field_instances['node-stanford_event_series-field_s_image_info'] = array(
     'bundle' => 'stanford_event_series',
@@ -127,7 +167,9 @@ function stanford_event_series_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Begin typing the name of an event to add to the event series.');
   t('Description');
+  t('Event');
   t('Featured Image');
   t('This collection of fields displays an optional featured image, image credits, and caption.');
   t('This text field describes the event series. Here you can include information about the registration process; people, partners, or sponsors; and any other resources or links.
