@@ -1,0 +1,7 @@
+Stanford Event Series x.x-x.x xxxx-xx-xx
+--------------------------------------
+
+Stanford Event Series 7.x-1.0-alpha1 2015-02-18
+-----------------------------------------------
+Created Stanford Event Series content type
+
