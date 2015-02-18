@@ -1,10 +1,10 @@
-#[Stanford Image](https://github.com/SU-SWS/stanford_image)
-##### Version: 7.x-3.1
+#[Stanford Event Series](https://github.com/SU-SWS/stanford_image)
+##### Version: 7.x-1.0
 
-Maintainers: [cynmij](https://github.com/cynmij), [cjwest](https://github.com/cjwest)
+Maintainers: [cjwest](https://github.com/cjwest)
 [Changelog.txt](CHANGELOG.txt)
 
-This module provides an image Field Collection and associated Display Suite view modes. It requires the [stanford_image_styles module](https://github.com/SU-SWS/stanford_image_styles), and is the foundation for several other modules. This allows content authors to upload and place images on content types with added information such as a caption.
+This module provides an event series for creating a collection of events. It requires the [stanford_event](https://github.com/SU-SWS/stanford_event) module. 
 
 
 Installation
