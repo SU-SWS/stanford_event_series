@@ -13,6 +13,38 @@ function stanford_event_series_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_event_series_style|node|stanford_event|default';
+  $field_group->group_name = 'group_s_event_series_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_event';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'This event belongs to a series',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_s_event_series',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'This event belongs to a series',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-s-event-series-style field-group-div header-striped',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_s_event_series_style|node|stanford_event|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_featured_image_style|node|stanford_event_series|default';
   $field_group->group_name = 'group_s_featured_image_style';
   $field_group->entity_type = 'node';
