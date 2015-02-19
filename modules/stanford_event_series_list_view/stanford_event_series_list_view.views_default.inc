@@ -23,6 +23,7 @@ function stanford_event_series_list_view_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Event Series';
+  $handler->display->display_options['css_class'] = 'views-row-lines';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -101,6 +102,10 @@ function stanford_event_series_list_view_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['element_label_type'] = 'div';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Sort criterion: Content: Sorting Weight (field_s_series_weight) */
+  $handler->display->display_options['sorts']['field_s_series_weight_value']['id'] = 'field_s_series_weight_value';
+  $handler->display->display_options['sorts']['field_s_series_weight_value']['table'] = 'field_data_field_s_series_weight';
+  $handler->display->display_options['sorts']['field_s_series_weight_value']['field'] = 'field_s_series_weight_value';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
