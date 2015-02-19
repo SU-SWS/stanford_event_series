@@ -31,7 +31,7 @@ function stanford_event_series_list_view_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Field: Featured Image (field_s_image_info) */
+  /* Relationship: Field: Image (field_s_image_info) */
   $handler->display->display_options['relationships']['field_s_image_info_value']['id'] = 'field_s_image_info_value';
   $handler->display->display_options['relationships']['field_s_image_info_value']['table'] = 'field_data_field_s_image_info';
   $handler->display->display_options['relationships']['field_s_image_info_value']['field'] = 'field_s_image_info_value';
