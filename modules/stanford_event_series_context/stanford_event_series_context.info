@@ -15,4 +15,5 @@ features[context][] = event_series
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+mtime = 1424374618
 project path = sites/all/modules/stanford/stanford_event_series/modules

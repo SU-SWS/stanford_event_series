@@ -33,13 +33,13 @@ function stanford_event_series_context_context_default_contexts() {
           'module' => 'views',
           'delta' => '9f6372645d6fc08fabe9ca8a6d8ba157',
           'region' => 'content_lower',
-          'weight' => '-8',
+          'weight' => '-10',
         ),
-        'views-e1568d67328e7ab299fa47304881757f' => array(
+        'views-a9c39f329de245648d5ebeee11565ada' => array(
           'module' => 'views',
-          'delta' => 'e1568d67328e7ab299fa47304881757f',
+          'delta' => 'a9c39f329de245648d5ebeee11565ada',
           'region' => 'content_lower',
-          'weight' => '-7',
+          'weight' => '-9',
         ),
       ),
     ),
