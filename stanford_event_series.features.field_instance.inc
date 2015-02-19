@@ -164,11 +164,62 @@ function stanford_event_series_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-stanford_event_series-field_s_series_weight'
+  $field_instances['node-stanford_event_series-field_s_series_weight'] = array(
+    'bundle' => 'stanford_event_series',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_series_weight',
+    'label' => 'Sorting Weight',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 7,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
   t('Event Series');
   t('Featured Image');
+  t('Sorting Weight');
   t('This collection of fields displays an optional featured image, image credits, and caption.');
   t('This text field describes the event series. Here you can include information about the registration process; people, partners, or sponsors; and any other resources or links.
 ');
