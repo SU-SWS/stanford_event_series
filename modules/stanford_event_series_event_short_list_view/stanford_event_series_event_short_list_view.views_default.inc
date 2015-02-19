@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * stanford_event_series_events_list_short_.views_default.inc
+ * stanford_event_series_event_short_list_view.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function stanford_event_series_events_list_short__views_default_views() {
+function stanford_event_series_event_short_list_view_views_default_views() {
   $export = array();
 
   $view = new view();

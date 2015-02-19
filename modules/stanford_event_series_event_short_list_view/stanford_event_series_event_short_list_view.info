@@ -1,9 +1,9 @@
-name = Stanford Event Series Events list short 
-description = View listing events with fewer fields
+name = Stanford Event Series Event Short List View
+description = Event list view with fewer fields
 core = 7.x
 package = Stanford
-version = 7.x-1.0-alpha1
-project = stanford_event_series_events_list_short_
+version = 7.x-1.0-alpha
+project = stanford_event_series_event_short_list_view
 dependencies[] = ctools
 dependencies[] = stanford_event_series
 dependencies[] = views
