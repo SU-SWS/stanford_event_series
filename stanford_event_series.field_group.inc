@@ -74,5 +74,33 @@ function stanford_event_series_field_group_info() {
   );
   $export['group_s_featured_image_style|node|stanford_event_series|default'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_series_advanced|node|stanford_event_series|form';
+  $field_group->group_name = 'group_s_series_advanced';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_event_series';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Advanced',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_s_series_weight',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Advanced',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $export['group_s_series_advanced|node|stanford_event_series|form'] = $field_group;
+
   return $export;
 }
