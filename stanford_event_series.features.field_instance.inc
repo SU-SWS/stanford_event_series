@@ -10,6 +10,45 @@
 function stanford_event_series_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-stanford_event-field_s_event_series'
+  $field_instances['node-stanford_event-field_s_event_series'] = array(
+    'bundle' => 'stanford_event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_event_series',
+    'label' => 'Event Series',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 13,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_event_series-body'
   $field_instances['node-stanford_event_series-body'] = array(
     'bundle' => 'stanford_event_series',
@@ -128,6 +167,7 @@ function stanford_event_series_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Description');
+  t('Event Series');
   t('Featured Image');
   t('This collection of fields displays an optional featured image, image credits, and caption.');
   t('This text field describes the event series. Here you can include information about the registration process; people, partners, or sponsors; and any other resources or links.

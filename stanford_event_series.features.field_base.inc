@@ -10,13 +10,13 @@
 function stanford_event_series_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_s_event_series_event'
-  $field_bases['field_s_event_series_event'] = array(
+  // Exported field_base: 'field_s_event_series'
+  $field_bases['field_s_event_series'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_s_event_series_event',
+    'field_name' => 'field_s_event_series',
     'foreign keys' => array(
       'node' => array(
         'columns' => array(
@@ -44,7 +44,7 @@ function stanford_event_series_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'stanford_event' => 'stanford_event',
+          'stanford_event_series' => 'stanford_event_series',
         ),
       ),
       'target_type' => 'node',
