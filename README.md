@@ -1,10 +1,10 @@
 #[Stanford Event Series](https://github.com/SU-SWS/stanford_image)
-##### Version: 7.x-1.0
+##### Version: 7.x-1.x
 
 Maintainers: [cjwest](https://github.com/cjwest)
 [Changelog.txt](CHANGELOG.txt)
 
-This module provides an event series for creating a collection of events. It requires the [stanford_event](https://github.com/SU-SWS/stanford_event) module. 
+This module provides an event series for creating a collection of events. It requires the [stanford_event](https://github.com/SU-SWS/stanford_event) module.
 
 
 Installation
