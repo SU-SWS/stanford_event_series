@@ -5,3 +5,32 @@
  */
 
 include_once 'stanford_event_series_administration.features.inc';
+
+/**
+ * Implementation of hook_views_pre_render().
+ */
+function stanford_event_series_administration_views_pre_view(&$view) {
+
+  /**
+   * Add event series column to manage events view.
+   * @var [type]
+   */
+  if ($view->name == 'stanford_events_manage' && $view->current_display == "page") {
+
+    // Multiple value field using UL list.
+    $view->add_item($view->current_display, 'field', 'field_data_field_s_event_series', 'field_s_event_series', array(
+      'label' => 'Event series',
+      'element_default_classes' => 1,
+      'element_label_colon' => 0,
+      'hide_empty' => 1,
+      'settings' => array(
+        'link' => 1,
+      ),
+      'group_type' => "group",
+      'group_rows' => 1,
+      'multi_type' => "ul",
+    ),
+    'field_s_event_series');
+  }
+
+}
