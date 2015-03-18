@@ -20,14 +20,14 @@ function stanford_event_series_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'This event belongs to a series',
+    'label' => 'This event belongs to the following series',
     'weight' => '7',
     'children' => array(
       0 => 'field_s_event_series',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'This event belongs to a series',
+      'label' => 'This event belongs to the following series',
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-s-event-series-style field-group-div header-striped',
