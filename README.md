@@ -17,13 +17,13 @@ This feature module contains a view for the stanford_manage feature. It provides
 **[Stanford Event Series Context](modules/stanford_event_series_context)**
 This feature module contains a context for event series. It provides a context for placing blocks on event series nodes. 
 
-**[Stanford Event Series List view](modules/stanford_event_series_list_view)**
+**[Stanford Event Series List View](modules/stanford_event_series_list_view)**
 This feature module contains a view for listing event series.
 
-**[Stanford Event Series Event List view](modules/stanford_event_series_event_list_view)**
+**[Stanford Event Series Event List View](modules/stanford_event_series_event_list_view)**
 This feature module contains a view for listing events in a series. This view is typically used for upcoming events, and for each event, displays the event image, title, location, and date.
 
-**[Stanford Event Series Event Short List View](modules/stanford_event_series_short_list_view)**
+**[Stanford Event Series Event Short List View](modules/stanford_event_series_event_short_list_view)**
 This feature module contains a view for listing events in a series. This view is typically used for past event, and for each event, displays the  title, and date.
 
 Installation
