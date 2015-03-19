@@ -37,4 +37,4 @@ features[variable][] = node_preview_stanford_event_series
 features[variable][] = node_submitted_stanford_event_series
 features[variable][] = pathauto_node_stanford_event_series_pattern
 features_exclude[field_base][body] = body
-mtime = 1426722302
+mtime = 1426722347

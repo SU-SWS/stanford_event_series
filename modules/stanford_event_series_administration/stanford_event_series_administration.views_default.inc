@@ -42,10 +42,10 @@ function stanford_event_series_administration_views_default_views() {
     'views_bulk_operations' => 'views_bulk_operations',
     'field_s_image_info' => 'field_s_image_info',
     'title' => 'title',
-    'timestamp' => 'title',
     'status' => 'status',
     'changed' => 'changed',
     'name' => 'name',
+    'field_s_series_weight' => 'field_s_series_weight',
     'nid' => 'nid',
     'edit_node' => 'edit_node',
     'view_node' => 'edit_node',
@@ -77,11 +77,6 @@ function stanford_event_series_administration_views_default_views() {
       'separator' => ' ',
       'empty_column' => 0,
     ),
-    'timestamp' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'status' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
@@ -97,6 +92,13 @@ function stanford_event_series_administration_views_default_views() {
       'empty_column' => 0,
     ),
     'name' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_s_series_weight' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -152,59 +154,65 @@ function stanford_event_series_administration_views_default_views() {
   $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
     'action::node_assign_owner_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
+    ),
+    'action::node_convert_convert_action' => array(
+      'selected' => 0,
       'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
     ),
     'action::views_bulk_operations_delete_item' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Delete',
-      'postpone_processing' => 0,
     ),
-    'action::system_message_action' => array(
+    'action::views_bulk_operations_delete_revision' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::views_bulk_operations_script_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_make_sticky_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_make_unsticky_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::views_bulk_operations_modify_action' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Modify',
       'settings' => array(
         'show_all_tokens' => 1,
         'display_values' => array(
-          'stanford_page::field_s_image_info' => 'stanford_page::field_s_image_info',
-          'stanford_page::field_s_page_file' => 'stanford_page::field_s_page_file',
+          'stanford_event_series::field_s_series_weight' => 'stanford_event_series::field_s_series_weight',
         ),
       ),
-      'postpone_processing' => 0,
     ),
     'action::views_bulk_operations_argument_selector_action' => array(
       'selected' => 0,
@@ -217,66 +225,59 @@ function stanford_event_series_administration_views_default_views() {
     ),
     'action::node_promote_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_publish_action' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Publish',
-      'postpone_processing' => 0,
-    ),
-    'action::system_goto_action' => array(
-      'selected' => 0,
-      'skip_confirmation' => 0,
-      'override_label' => 0,
-      'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_unpromote_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_save_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::system_send_email_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::node_unpublish_action' => array(
       'selected' => 1,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 1,
       'label' => 'Unpublish',
-      'postpone_processing' => 0,
     ),
     'action::node_unpublish_by_keyword_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
     'action::pathauto_node_update_action' => array(
       'selected' => 0,
+      'postpone_processing' => 0,
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
-      'postpone_processing' => 0,
     ),
   );
   /* Field: Field: Image */
@@ -311,6 +312,15 @@ function stanford_event_series_administration_views_default_views() {
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['name']['label'] = 'Author';
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  /* Field: Content: Sorting Weight */
+  $handler->display->display_options['fields']['field_s_series_weight']['id'] = 'field_s_series_weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['table'] = 'field_data_field_s_series_weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['field'] = 'field_s_series_weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['label'] = 'Weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+  );
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
