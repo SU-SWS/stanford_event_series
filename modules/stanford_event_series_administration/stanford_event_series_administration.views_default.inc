@@ -42,10 +42,10 @@ function stanford_event_series_administration_views_default_views() {
     'views_bulk_operations' => 'views_bulk_operations',
     'field_s_image_info' => 'field_s_image_info',
     'title' => 'title',
-    'timestamp' => 'title',
     'status' => 'status',
     'changed' => 'changed',
     'name' => 'name',
+    'field_s_series_weight' => 'field_s_series_weight',
     'nid' => 'nid',
     'edit_node' => 'edit_node',
     'view_node' => 'edit_node',
@@ -77,11 +77,6 @@ function stanford_event_series_administration_views_default_views() {
       'separator' => ' ',
       'empty_column' => 0,
     ),
-    'timestamp' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'status' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
@@ -97,6 +92,13 @@ function stanford_event_series_administration_views_default_views() {
       'empty_column' => 0,
     ),
     'name' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_s_series_weight' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -126,7 +128,7 @@ function stanford_event_series_administration_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Relationship: Field: Image (field_s_image_info) */
+  /* Relationship: Field: Featured Image (field_s_image_info) */
   $handler->display->display_options['relationships']['field_s_image_info_value']['id'] = 'field_s_image_info_value';
   $handler->display->display_options['relationships']['field_s_image_info_value']['table'] = 'field_data_field_s_image_info';
   $handler->display->display_options['relationships']['field_s_image_info_value']['field'] = 'field_s_image_info_value';
@@ -279,7 +281,7 @@ function stanford_event_series_administration_views_default_views() {
       'postpone_processing' => 0,
     ),
   );
-  /* Field: Field: Image */
+  /* Field: Field: Featured Image */
   $handler->display->display_options['fields']['field_s_image_info']['id'] = 'field_s_image_info';
   $handler->display->display_options['fields']['field_s_image_info']['table'] = 'field_data_field_s_image_info';
   $handler->display->display_options['fields']['field_s_image_info']['field'] = 'field_s_image_info';
@@ -311,6 +313,15 @@ function stanford_event_series_administration_views_default_views() {
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['name']['label'] = 'Author';
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  /* Field: Content: Sorting Weight */
+  $handler->display->display_options['fields']['field_s_series_weight']['id'] = 'field_s_series_weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['table'] = 'field_data_field_s_series_weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['field'] = 'field_s_series_weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['label'] = 'Weight';
+  $handler->display->display_options['fields']['field_s_series_weight']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+  );
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
